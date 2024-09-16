@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.27)  16 SEP 2024 16:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.27)  16 SEP 2024 18:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -677,7 +677,7 @@ Package: xstring 2023/08/22 v1.86 String manipulations (CT)
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count348
 \l__pdf_internal_box=\box88
-) (./main.aux (./introduction.aux) (./background.aux) (./experiments.aux) (./conclusion.aux) (./applications.aux))
+) (./main.aux (./introduction.aux) (./related_work.aux) (./experiments.aux) (./conclusion.aux) (./applications.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 158.
@@ -793,7 +793,7 @@ Chapitre 1.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 24.
 
-<images/d3s_logo.png, id=126, 324.21124pt x 114.4275pt>
+<images/d3s_logo.png, id=122, 324.21124pt x 114.4275pt>
 File: images/d3s_logo.png Graphic file (type png)
 <use images/d3s_logo.png>
 Package pdftex.def Info: images/d3s_logo.png  used on input line 26.
@@ -815,35 +815,39 @@ l.34
  <./images/d3s_logo.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 35.
+               Default added (so using `tbp') on input line 37.
 
-<images/similar-pieces.png, id=135, 768.8725pt x 325.215pt>
+<images/similar-pieces.png, id=131, 768.8725pt x 325.215pt>
 File: images/similar-pieces.png Graphic file (type png)
 <use images/similar-pieces.png>
-Package pdftex.def Info: images/similar-pieces.png  used on input line 37.
+Package pdftex.def Info: images/similar-pieces.png  used on input line 39.
 (pdftex.def)             Requested size: 368.57838pt x 155.90292pt.
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 56.
+Underfull \vbox (badness 1803) has occurred while \output is active []
 
-<images/steps.png, id=142, 656.4525pt x 85.31876pt>
-File: images/steps.png Graphic file (type png)
-<use images/steps.png>
-Package pdftex.def Info: images/steps.png  used on input line 58.
-(pdftex.def)             Requested size: 368.57838pt x 47.90443pt.
-)
+
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.210 \include{introduction}
-                             [2 <./images/similar-pieces.png>]
+l.49 
+      [2 <./images/similar-pieces.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 58.
+
+<images/steps.png, id=143, 656.4525pt x 85.31876pt>
+File: images/steps.png Graphic file (type png)
+<use images/steps.png>
+Package pdftex.def Info: images/steps.png  used on input line 60.
+(pdftex.def)             Requested size: 368.57838pt x 47.90443pt.
+)
 
 [3 <./images/steps.png>]
-\openout2 = `background.aux'.
+\openout2 = `related_work.aux'.
 
- (./background.tex
+ (./related_work.tex
 
 [4
 
@@ -853,52 +857,16 @@ l.210 \include{introduction}
 ]
 Chapitre 2.
 
-LaTeX Warning: Citation `Roque2012' on page 5 undefined on input line 5.
 
-
-LaTeX Warning: Citation `Roque2012b' on page 5 undefined on input line 5.
-
-
-LaTeX Warning: Citation `Roque2012c' on page 5 undefined on input line 5.
-
-
-LaTeX Warning: Citation `Roque2012d' on page 5 undefined on input line 5.
-
-
-LaTeX Warning: Citation `Arapoglou2011' on page 5 undefined on input line 5.
-
-
-LaTeX Warning: Citation `Roque2013c' on page 5 undefined on input line 5.
-
-(./images/tikz_diagram.tex)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[5]
+[5])
 
 [6]
-<images/bitmap_image.jpg, id=181, 505.60658pt x 361.06659pt>
-File: images/bitmap_image.jpg Graphic file (type jpg)
-<use images/bitmap_image.jpg>
-Package pdftex.def Info: images/bitmap_image.jpg  used on input line 39.
-(pdftex.def)             Requested size: 113.81102pt x 81.27504pt.
-)
-
-[7 <./images/bitmap_image.jpg>]
 \openout2 = `experiments.aux'.
 
  (./experiments.tex
-
-[8
-
-
-
-
-]
 Chapitre 3.
 
-LaTeX Warning: Citation `Cadambe2008' on page 9 undefined on input line 4.
+LaTeX Warning: Citation `Cadambe2008' on page 7 undefined on input line 4.
 
 (./images/tikz_plot.tex
 Missing character: There is no ; in font nullfont!
@@ -908,18 +876,23 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 )
 
-[9]
+[7
+
+
+
+
+]
+
+[8]
+
+[9])
 
 [10]
-
-[11])
-
-[12]
 \openout2 = `conclusion.aux'.
 
  (./conclusion.tex)
 
-[13
+[11
 
 
 
@@ -929,7 +902,7 @@ Missing character: There is no ; in font nullfont!
 
  (./applications.tex
 
-[14
+[12
 
 
 
@@ -938,19 +911,21 @@ Missing character: There is no ; in font nullfont!
 Chapitre 4.
 )
 
-[15] (./main.bbl
+[13] (./main.bbl
 
-[16
+[14
 
 
 
-])
+]
 
-[17]
+[15])
 
-[18
+[16]
 
-] (./main.aux (./introduction.aux) (./background.aux) (./experiments.aux) (./conclusion.aux) (./applications.aux))
+[17
+
+] (./main.aux (./introduction.aux) (./related_work.aux) (./experiments.aux) (./conclusion.aux) (./applications.aux))
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-05-27>
@@ -960,21 +935,21 @@ L3 programming layer <2024-05-27>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 6595FE76F8D73E7ADBEF9AFE2CFEFFFA;2514.
+(rerunfilecheck)             Checksum: DD08DF0A31F74A851A01092849A531F3;2530.
  ) 
 Here is how much of TeX's memory you used:
- 38273 strings out of 473584
- 888551 string characters out of 5728334
- 1951905 words of memory out of 5000000
- 60452 multiletter control sequences out of 15000+600000
+ 38208 strings out of 473584
+ 887337 string characters out of 5728334
+ 1948905 words of memory out of 5000000
+ 60385 multiletter control sequences out of 15000+600000
  574546 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,20n,93p,2275b,2421s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,20n,93p,2145b,2424s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (24 pages, 689990 bytes).
+Output written on main.pdf (23 pages, 470786 bytes).
 PDF statistics:
- 329 PDF objects out of 1000 (max. 8388607)
- 257 compressed objects within 3 object streams
- 55 named destinations out of 1000 (max. 500000)
- 158 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 333 PDF objects out of 1000 (max. 8388607)
+ 263 compressed objects within 3 object streams
+ 60 named destinations out of 1000 (max. 500000)
+ 153 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,8 +1,22 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{dengPPFNetGlobalContext2018}
+Haowen Deng, Tolga Birdal, and Slobodan Ilic.
+\newblock {{PPFNet}}: {{Global Context Aware Local Features}} for {{Robust 3D Point Matching}}, March 2018.
+
+\bibitem{jumperHighlyAccurateProtein2021}
+John Jumper, Richard Evans, Alexander Pritzel, Tim Green, Michael Figurnov, Olaf Ronneberger, Kathryn Tunyasuvunakool, Russ Bates, Augustin {\v Z}{\'i}dek, Anna Potapenko, Alex Bridgland, Clemens Meyer, Simon A.~A. Kohl, Andrew~J. Ballard, Andrew Cowie, Bernardino {Romera-Paredes}, Stanislav Nikolov, Rishub Jain, Jonas Adler, Trevor Back, Stig Petersen, David Reiman, Ellen Clancy, Michal Zielinski, Martin Steinegger, Michalina Pacholska, Tamas Berghammer, Sebastian Bodenstein, David Silver, Oriol Vinyals, Andrew~W. Senior, Koray Kavukcuoglu, Pushmeet Kohli, and Demis Hassabis.
+\newblock Highly accurate protein structure prediction with {{AlphaFold}}.
+\newblock {\em Nature}, 596(7873):583--589, August 2021.
 
 \bibitem{liuOpenShapeScaling3D2023}
 Minghua Liu, Ruoxi Shi, Kaiming Kuang, Yinhao Zhu, Xuanlin Li, Shizhong Han, Hong Cai, Fatih Porikli, and Hao Su.
 \newblock {{OpenShape}}: {{Scaling Up 3D Shape Representation Towards Open-World Understanding}}, June 2023.
+
+\bibitem{mandelliCAD3DModel2022}
+L.~Mandelli and Stefano Berretti.
+\newblock {\em {{CAD 3D Model}} Classification by {{Graph Neural Networks}}: {{A}} New Approach Based on {{STEP}} Format}.
+\newblock October 2022.
 
 \bibitem{radfordLearningTransferableVisual2021}
 Alec Radford, Jong~Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, Gretchen Krueger, and Ilya Sutskever.
@@ -11,6 +25,23 @@ Alec Radford, Jong~Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini
 \bibitem{schroffFaceNetUnifiedEmbedding2015}
 Florian Schroff, Dmitry Kalenichenko, and James Philbin.
 \newblock {{FaceNet}}: {{A Unified Embedding}} for {{Face Recognition}} and {{Clustering}}, June 2015.
+
+\bibitem{vaswaniAttentionAllYou2023b}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan~N. Gomez, Lukasz Kaiser, and Illia Polosukhin.
+\newblock Attention {{Is All You Need}}, August 2023.
+
+\bibitem{vermaFeaStNetFeatureSteeredGraph2018}
+Nitika Verma, Edmond Boyer, and Jakob Verbeek.
+\newblock {{FeaStNet}}: {{Feature-Steered Graph Convolutions}} for {{3D Shape Analysis}}, March 2018.
+
+\bibitem{wangDynamicGraphCNN2019}
+Yue Wang, Yongbin Sun, Ziwei Liu, Sanjay~E. Sarma, Michael~M. Bronstein, and Justin~M. Solomon.
+\newblock Dynamic {{Graph CNN}} for {{Learning}} on {{Point Clouds}}, June 2019.
+
+\bibitem{wuComprehensiveSurveyGraph2021}
+Zonghan Wu, Shirui Pan, Fengwen Chen, Guodong Long, Chengqi Zhang, and Philip~S. Yu.
+\newblock A {{Comprehensive Survey}} on {{Graph Neural Networks}}.
+\newblock {\em IEEE Transactions on Neural Networks and Learning Systems}, 32(1):4--24, January 2021.
 
 \bibitem{yuPointBERTPretraining3D2022}
 Xumin Yu, Lulu Tang, Yongming Rao, Tiejun Huang, Jie Zhou, and Jiwen Lu.

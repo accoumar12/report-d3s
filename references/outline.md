@@ -6,8 +6,6 @@
 
 ### 3D similarity model
 
-### Labeling tool
-
 ## Related work
 
 ### 3D understanding
@@ -15,6 +13,8 @@
 ### Contrastive learning
 
 ## Experiments
+
+### Labeling tool
 
 ### Triplets generation
 

@@ -1,0 +1,29 @@
+\chapter{Related work}
+\label{chap:related_work}
+
+\section{3D Understanding}
+
+3D data can be presented in various formats, and the selection of the format is critical and depends on the specific needs of the application. A CAD model is a 3D representation of a physical object. At a higher level, the Standard for the Exchange of Product model data (STEP format) is a widely adopted ISO standard for data exchange that can represent 3D objects in CAD and related information. In this format, a CAD model is defined by its topological components such as faces, edges, or vertices and the connections between them. At a lower level, the STL format is a file format that represents 3D objects as a collection of triangles (mesh). This format is commonly used in 3D printing and computer graphics. Additionally, the point cloud format consists of a set of points in a 3D space, with each point representing a single point on the surface of the object. This format can be easily derived from an STL file by sampling points on the mesh surface. Other formats worth mentioning include voxel and multi-view image formats \cite{zhangDeepLearningbased3D2023}.
+
+The decision was made to explore both STL and point cloud formats. The choice of the STL format is driven by its widespread use in the industry and the ease of generating a point cloud from it. Notably, models based on the STEP format \cite{mandelliCAD3DModel2022}, while promising, were not considered because they limit the scope too much.
+
+Following recent trends in the field, two main classes of models were investigated, graph-based models and transformer-based models.
+
+\subsubsection{Graph-based models}
+
+Graph neural networks (GNN) have been used recently in numerous applications \cite{wuComprehensiveSurveyGraph2021,jumperHighlyAccurateProtein2021}
+The flexible nature of a graph permits its usage from data sets concerning large social networks to smaller networks that describe the chemical bonds of a molecule. Graph neural networks use the correspondences between elements instead of focusing on individual elements. These correspondences help create neighborhoods and local regions, which greatly enhance the predictive accuracy of the resulting features.
+
+Given an input mesh, a natural candidate is a graph which nodes are the vertices of the mesh and where each vertex is connected to the vertices that share a face with it. This information is not available for the different GNNs that have been developed for 3D point cloud data \cite{vermaFeaStNetFeatureSteeredGraph2018,wangDynamicGraphCNN2019,dengPPFNetGlobalContext2018}. These models are designed to work with point clouds. The main challenge is to define a graph structure that captures the local and global features of the point cloud. The most common approach is to define a graph where each point is a node and the edges are defined by the k-nearest neighbors of each point. The graph is then fed to a GNN to extract features from the point cloud.
+
+\subsubsection{Transformer-based models}
+
+Transformers have been widely used in natural language processing (NLP) tasks \cite{vaswaniAttentionAllYou2023b}. The transformer architecture is based on self-attention mechanisms that allow the model to focus on different parts of the input sequence. 
+
+\section{Contrastive learning}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "isae-report-template"
+%%% End: 
