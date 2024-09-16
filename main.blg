@@ -1,15 +1,16 @@
 This is BibTeX, Version 0.99d (TeX Live 2024)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
-A level-1 auxiliary file: 01-introduction.aux
-A level-1 auxiliary file: 02-first-chapter.aux
-A level-1 auxiliary file: 03-another-chapter.aux
-A level-1 auxiliary file: 04-conclusion.aux
+A level-1 auxiliary file: introduction.aux
+A level-1 auxiliary file: background.aux
+A level-1 auxiliary file: experiments.aux
+A level-1 auxiliary file: conclusion.aux
+A level-1 auxiliary file: applications.aux
 The style file: authoryear-fr.bst
 Database file #1: references.bib
 You've used 7 entries,
             2415 wiz_defined-function locations,
-            606 strings with 5925 characters,
+            607 strings with 5922 characters,
 and the built_in function-call counts, 3235 in all, are:
 = -- 324
 > -- 131
