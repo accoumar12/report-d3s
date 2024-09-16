@@ -1,0 +1,38 @@
+\begin{thebibliography}{xxxx}
+
+\bibitem[Arapoglou~2011]{Arapoglou2011}
+P.~Arapoglou, K.~Liolis, M.~Bertinelli, A.~Panagopoulos, P.~Cottis et R.~De~Gaudenzi.
+\newblock {\em MIMO over Satellite: A Review}.
+\newblock Communications Surveys Tutorials, IEEE, vol.~13, no.~1, pages 27--51, 2011.
+
+\bibitem[Cadambe~2008]{Cadambe2008}
+V.R. Cadambe et S.A. Jafar.
+\newblock {\em Interference Alignment and Degrees of Freedom of the K -User Interference Channel}.
+\newblock Information Theory, IEEE Transactions on, vol.~54, no.~8, pages 3425--3441, 2008.
+
+\bibitem[Roque~2012a]{Roque2012c}
+D.~Roque, C.~Siclet et J.M. Brossier.
+\newblock {\em A low-complexity {FBMC} scheme analysis with {LDPC} coding in mobile-to-mobile Environment}.
+\newblock In Proc. IEEE Military Conference on Communications, MILCOM '12, 2012.
+
+\bibitem[Roque~2012b]{Roque2012d}
+D.~Roque, C.~Siclet, J.M. Brossier et P.~Siohan.
+\newblock {\em Weighted cyclic prefix {OFDM}: {PAPR} analysis and performances comparison with {DFT}-precoding}.
+\newblock In Proc. IEEE 46th Annual Asilomar Conference on Signals, Systems, and Computers, ASILOMARSSC '12, pages 1065--1068, 2012.
+
+\bibitem[Roque~2012c]{Roque2012}
+D.~Roque, C.~Siclet et P.~Siohan.
+\newblock {\em A performance comparison of {FBMC} modulation schemes with short perfect reconstruction filters}.
+\newblock In Proc. IEEE International Conference on Telecommunications, ICT '12, pages 1--6, 2012.
+
+\bibitem[Roque~2013a]{Roque2012b}
+D.~Roque et C.~Siclet.
+\newblock {\em Performances of weighted cyclic prefix {OFDM} with low-complexity equalization}.
+\newblock {IEEE} Commun. Lett., vol.~17, no.~3, pages 439--442, 2013.
+
+\bibitem[Roque~2013b]{Roque2013c}
+D.~Roque et C.~Siclet.
+\newblock {\em Évaluation des performances d’un système {WCP-OFDM} en présence d’une estimation de canal bruitée}, 2013.
+\newblock Conférence.
+
+\end{thebibliography}
