@@ -444,6 +444,16 @@ INPUT ./images/d3s_logo.png
 INPUT ./images/d3s_logo.png
 INPUT ./images/d3s_logo.png
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/eccc1200.tfm
+INPUT ./images/similar-pieces.png
+INPUT ./images/similar-pieces.png
+INPUT ./images/similar-pieces.png
+INPUT ./images/similar-pieces.png
+INPUT ./images/similar-pieces.png
+INPUT ./images/steps.png
+INPUT ./images/steps.png
+INPUT ./images/steps.png
+INPUT ./images/steps.png
+INPUT ./images/steps.png
 INPUT ./background.tex
 INPUT ./background.tex
 OUTPUT background.aux

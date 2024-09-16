@@ -6,15 +6,17 @@
 
 ### 3D similarity model
 
-### Labeling tool for building a triplet dataset
+### Labeling tool
 
-## Background
+## Related work
 
 ### 3D understanding
 
 ### Contrastive learning
 
 ## Experiments
+
+### Triplets generation
 
 ### Backbone influence
 

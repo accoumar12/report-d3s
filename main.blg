@@ -6,46 +6,54 @@ A level-1 auxiliary file: background.aux
 A level-1 auxiliary file: experiments.aux
 A level-1 auxiliary file: conclusion.aux
 A level-1 auxiliary file: applications.aux
-The style file: authoryear-fr.bst
-Database file #1: references.bib
-You've used 7 entries,
-            2415 wiz_defined-function locations,
-            607 strings with 5922 characters,
-and the built_in function-call counts, 3235 in all, are:
-= -- 324
-> -- 131
-< -- 5
-+ -- 49
-- -- 44
-* -- 225
-:= -- 493
-add.period$ -- 21
-call.type$ -- 7
-change.case$ -- 43
-chr.to.int$ -- 4
-cite$ -- 7
-duplicate$ -- 147
-empty$ -- 241
-format.name$ -- 51
-if$ -- 709
-int.to.chr$ -- 4
-int.to.str$ -- 0
-missing$ -- 6
-newline$ -- 38
-num.names$ -- 14
-pop$ -- 52
+The style file: plain.bst
+Database file #1: SFE_report.bib
+Warning--I didn't find a database entry for "Roque2012"
+Warning--I didn't find a database entry for "Roque2012b"
+Warning--I didn't find a database entry for "Roque2012c"
+Warning--I didn't find a database entry for "Roque2012d"
+Warning--I didn't find a database entry for "Arapoglou2011"
+Warning--I didn't find a database entry for "Roque2013c"
+Warning--I didn't find a database entry for "Cadambe2008"
+You've used 5 entries,
+            2118 wiz_defined-function locations,
+            547 strings with 5650 characters,
+and the built_in function-call counts, 2105 in all, are:
+= -- 164
+> -- 200
+< -- 0
++ -- 79
+- -- 74
+* -- 186
+:= -- 376
+add.period$ -- 11
+call.type$ -- 5
+change.case$ -- 52
+chr.to.int$ -- 0
+cite$ -- 5
+duplicate$ -- 39
+empty$ -- 114
+format.name$ -- 74
+if$ -- 399
+int.to.chr$ -- 0
+int.to.str$ -- 5
+missing$ -- 1
+newline$ -- 24
+num.names$ -- 10
+pop$ -- 70
 preamble$ -- 1
-purify$ -- 57
+purify$ -- 47
 quote$ -- 0
-skip$ -- 133
+skip$ -- 39
 stack$ -- 0
-substring$ -- 183
-swap$ -- 54
-text.length$ -- 5
+substring$ -- 43
+swap$ -- 5
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 56
+type$ -- 20
 warning$ -- 0
-while$ -- 24
-width$ -- 10
-write$ -- 97
+while$ -- 11
+width$ -- 6
+write$ -- 45
+(There were 7 warnings)
