@@ -19,7 +19,7 @@ The company’s solutions are designed to provide scalable, adaptable, and secur
 
 \vspace{0.5cm}
 
-I will be working with the 3D CAD Analytics team, where my focus will be on developing a 3D similarity model designed to compare CAD models solely based on their geometric properties.
+I have been working with the 3D CAD Analytics team, where my focus was on developing a 3D similarity model designed to compare CAD models solely based on their geometric properties.
 
 \begin{figure}[]
     \centering
@@ -47,11 +47,12 @@ The most comprehensive dataset available consists of just 2,000 CAD models, with
 
 Given the recent success of self-supervised learning methods, more specifically contrastive learning \cite{radfordLearningTransferableVisual2021,yuPointBERTPretraining3D2022,liuOpenShapeScaling3D2023}, an innovative and promising approach has been proposed to tackle this problem.
 
-The goal is to learn a representation of data such that similar instances are close together in the representation space, while dissimilar instances are far apart. To do so, a triplet loss, popularized by the FaceNet model \cite{schroffFaceNetUnifiedEmbedding2015}, will be used. Since we lack labeled data, we can't generate triplets directly as in \cite{schroffFaceNetUnifiedEmbedding2015}. Instead, a 'Tinder-like' application has been developped and used by the whole company to build our 'labeled' triplets database.
+The goal is to learn a representation of data such that similar instances are close together in the representation space, while dissimilar instances are far apart. To do so, a triplet loss, popularized by the FaceNet model \cite{schroffFaceNetUnifiedEmbedding2015}, will be used. Since we lack labeled data, we can't generate triplets directly as in \cite{schroffFaceNetUnifiedEmbedding2015}. Instead, a 'Tinder-like' application has been developped and used by the whole company to build our labeled triplets database. To clarify, a labeled triplet consists of three 3D models: an anchor, a positive, and a negative model. The detailed framework of our triplet loss is outlined in \autoref{sec:triplet-loss-training}. In this setup, the anchor and positive models are similar to each other, whereas the negative model is distinct from both.
 
 To summarize, the pipeline comprises the two main following steps:
 \begin{enumerate}
-    \item \textbf{Triplets collection}: Offline 'unlabeled' triplets are generated. Triplets are then labeled by the users of the app and stored in the database.
+    %TODO coherence with other sections
+    \item \textbf{Triplets collection}: Offline unlabeled triplets are generated. Triplets are then labeled by the users of the app and stored in the database.
     \item \textbf{Model training}: An encoding model is trained on the labeled triplets. The model is then used to compute the similarity between two 3D models.
 \end{enumerate}
 

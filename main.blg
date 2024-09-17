@@ -3,52 +3,54 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 A level-1 auxiliary file: introduction.aux
 A level-1 auxiliary file: related_work.aux
+A level-1 auxiliary file: method.aux
 A level-1 auxiliary file: experiments.aux
 A level-1 auxiliary file: conclusion.aux
 A level-1 auxiliary file: applications.aux
+A level-1 auxiliary file: appendix.aux
 The style file: plain.bst
 Database file #1: SFE_report.bib
 Warning--I didn't find a database entry for "Cadambe2008"
 Warning--empty publisher in mandelliCAD3DModel2022
-You've used 14 entries,
+You've used 18 entries,
             2118 wiz_defined-function locations,
-            587 strings with 8365 characters,
-and the built_in function-call counts, 6309 in all, are:
-= -- 494
-> -- 622
-< -- 0
-+ -- 248
-- -- 232
-* -- 579
-:= -- 1122
-add.period$ -- 32
-call.type$ -- 14
-change.case$ -- 157
+            619 strings with 9462 characters,
+and the built_in function-call counts, 7829 in all, are:
+= -- 638
+> -- 707
+< -- 2
++ -- 280
+- -- 260
+* -- 693
+:= -- 1367
+add.period$ -- 44
+call.type$ -- 18
+change.case$ -- 181
 chr.to.int$ -- 0
-cite$ -- 15
-duplicate$ -- 115
-empty$ -- 319
-format.name$ -- 232
-if$ -- 1186
+cite$ -- 19
+duplicate$ -- 164
+empty$ -- 436
+format.name$ -- 260
+if$ -- 1508
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 5
-newline$ -- 63
-num.names$ -- 28
-pop$ -- 207
+int.to.str$ -- 18
+missing$ -- 7
+newline$ -- 82
+num.names$ -- 38
+pop$ -- 239
 preamble$ -- 1
-purify$ -- 144
+purify$ -- 164
 quote$ -- 0
-skip$ -- 107
+skip$ -- 148
 stack$ -- 0
-substring$ -- 131
-swap$ -- 14
-text.length$ -- 0
+substring$ -- 220
+swap$ -- 28
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 54
+type$ -- 70
 warning$ -- 1
-while$ -- 33
-width$ -- 16
-write$ -- 124
+while$ -- 47
+width$ -- 20
+write$ -- 167
 (There were 2 warnings)

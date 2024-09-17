@@ -12,19 +12,24 @@
 
 ### Contrastive learning
 
-## Experiments
+## Method
 
 ### Labeling tool
 
 ### Triplets generation
 
-### Backbone influence
-
-Importance of Batch normalisation
-
 ### Triplet loss training
 
-Notoriously hard
+## Experiments
+
+### Graph based models
+
+Importance of Batch normalisation
+triplet loss training Notoriously hard
+
+### Transformer based models
+
+weigths and finetunning
 
 ## Conclusion
 

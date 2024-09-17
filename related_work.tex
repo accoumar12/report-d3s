@@ -17,14 +17,18 @@ The flexible nature of a graph permits its usage from data sets concerning large
 Given an input mesh, a natural candidate is a graph which nodes are the vertices of the mesh and where each vertex is connected to the vertices that share a face with it. This information is not available for the different GNNs that have been developed for 3D point cloud data \cite{vermaFeaStNetFeatureSteeredGraph2018,wangDynamicGraphCNN2019,dengPPFNetGlobalContext2018}. These models are designed to work with point clouds. The main challenge is to define a graph structure that captures the local and global features of the point cloud. The most common approach is to define a graph where each point is a node and the edges are defined by the k-nearest neighbors of each point. The graph is then fed to a GNN to extract features from the point cloud.
 
 \subsubsection{Transformer-based models}
+
 Transformers \cite{vaswaniAttentionAllYou2023b} and self-attention models have revolutionized machine translation and natural language processing. 
 They can equal or even surpass convolutional networks when applied to sequences and 2D images \cite{dosovitskiyImageWorth16x162021}. 
 
 Self-attention is especially relevant in our context, as it naturally functions as a set operator, where positional information is treated as an attribute of elements within a set. Given that 3D point clouds consist of sets of points with positional attributes, the self-attention mechanism appears particularly well-suited to handling this type of data. Many recent works have explored the application of transformers to 3D data \cite{zhaoPointTransformer2021,yuPointBERTPretraining3D2022,liuOpenShapeScaling3D2023}.
 
-
 \section{Contrastive learning}
 
+The goal of contrastive representation learning is to learn an embedding space in which similar sample pairs stay close to each other while dissimilar ones are far apart. Contrastive learning can be applied to both supervised and unsupervised settings. When working with unsupervised data, contrastive learning is one of the most powerful approaches in self-supervised learning \cite{wengContrastiveRepresentationLearning2021}.
+
+
+Triplet loss is a widely used loss function in contrastive learning, made famous by the FaceNet model \cite{schroffFaceNetUnifiedEmbedding2015}. Numerous strategies have been suggested to enhance or refine the standard triplet loss \cite{hermansDefenseTripletLoss2017,geDeepMetricLearning2018,sundriyalSemiSupervisedLearningTriplet2021}. Our approach incorporates some of these optimizations while leveraging our in-house labeling tool (TODO).
 
 %%% Local Variables: 
 %%% mode: latex

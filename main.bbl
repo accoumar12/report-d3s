@@ -8,6 +8,15 @@ Haowen Deng, Tolga Birdal, and Slobodan Ilic.
 Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, Jakob Uszkoreit, and Neil Houlsby.
 \newblock An {{Image}} is {{Worth}} 16x16 {{Words}}: {{Transformers}} for {{Image Recognition}} at {{Scale}}, June 2021.
 
+\bibitem{geDeepMetricLearning2018}
+Weifeng Ge, Weilin Huang, Dengke Dong, and Matthew~R. Scott.
+\newblock Deep {{Metric Learning}} with {{Hierarchical Triplet Loss}}.
+\newblock In Vittorio Ferrari, Martial Hebert, Cristian Sminchisescu, and Yair Weiss, editors, {\em Computer {{Vision}} -- {{ECCV}} 2018}, volume 11210, pages 272--288. Springer International Publishing, Cham, 2018.
+
+\bibitem{hermansDefenseTripletLoss2017}
+Alexander Hermans, Lucas Beyer, and Bastian Leibe.
+\newblock In {{Defense}} of the {{Triplet Loss}} for {{Person Re-Identification}}, November 2017.
+
 \bibitem{jumperHighlyAccurateProtein2021}
 John Jumper, Richard Evans, Alexander Pritzel, Tim Green, Michael Figurnov, Olaf Ronneberger, Kathryn Tunyasuvunakool, Russ Bates, Augustin {\v Z}{\'i}dek, Anna Potapenko, Alex Bridgland, Clemens Meyer, Simon A.~A. Kohl, Andrew~J. Ballard, Andrew Cowie, Bernardino {Romera-Paredes}, Stanislav Nikolov, Rishub Jain, Jonas Adler, Trevor Back, Stig Petersen, David Reiman, Ellen Clancy, Michal Zielinski, Martin Steinegger, Michalina Pacholska, Tamas Berghammer, Sebastian Bodenstein, David Silver, Oriol Vinyals, Andrew~W. Senior, Koray Kavukcuoglu, Pushmeet Kohli, and Demis Hassabis.
 \newblock Highly accurate protein structure prediction with {{AlphaFold}}.
@@ -30,6 +39,11 @@ Alec Radford, Jong~Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini
 Florian Schroff, Dmitry Kalenichenko, and James Philbin.
 \newblock {{FaceNet}}: {{A Unified Embedding}} for {{Face Recognition}} and {{Clustering}}, June 2015.
 
+\bibitem{sundriyalSemiSupervisedLearningTriplet2021}
+Divyanshu Sundriyal, Soumyadeep Ghosh, Mayank Vatsa, and Richa Singh.
+\newblock Semi-{{Supervised Learning}} via {{Triplet Network Based Active Learning}} ({{Student Abstract}}).
+\newblock {\em Proceedings of the AAAI Conference on Artificial Intelligence}, 35(18):15903--15904, May 2021.
+
 \bibitem{vaswaniAttentionAllYou2023b}
 Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan~N. Gomez, Lukasz Kaiser, and Illia Polosukhin.
 \newblock Attention {{Is All You Need}}, August 2023.
@@ -41,6 +55,11 @@ Nitika Verma, Edmond Boyer, and Jakob Verbeek.
 \bibitem{wangDynamicGraphCNN2019}
 Yue Wang, Yongbin Sun, Ziwei Liu, Sanjay~E. Sarma, Michael~M. Bronstein, and Justin~M. Solomon.
 \newblock Dynamic {{Graph CNN}} for {{Learning}} on {{Point Clouds}}, June 2019.
+
+\bibitem{wengContrastiveRepresentationLearning2021}
+Lilian Weng.
+\newblock Contrastive {{Representation Learning}}.
+\newblock https://lilianweng.github.io/posts/2021-05-31-contrastive/, May 2021.
 
 \bibitem{wuComprehensiveSurveyGraph2021}
 Zonghan Wu, Shirui Pan, Fengwen Chen, Guodong Long, Chengqi Zhang, and Philip~S. Yu.
