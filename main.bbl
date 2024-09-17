@@ -4,6 +4,10 @@
 Haowen Deng, Tolga Birdal, and Slobodan Ilic.
 \newblock {{PPFNet}}: {{Global Context Aware Local Features}} for {{Robust 3D Point Matching}}, March 2018.
 
+\bibitem{dosovitskiyImageWorth16x162021}
+Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, Jakob Uszkoreit, and Neil Houlsby.
+\newblock An {{Image}} is {{Worth}} 16x16 {{Words}}: {{Transformers}} for {{Image Recognition}} at {{Scale}}, June 2021.
+
 \bibitem{jumperHighlyAccurateProtein2021}
 John Jumper, Richard Evans, Alexander Pritzel, Tim Green, Michael Figurnov, Olaf Ronneberger, Kathryn Tunyasuvunakool, Russ Bates, Augustin {\v Z}{\'i}dek, Anna Potapenko, Alex Bridgland, Clemens Meyer, Simon A.~A. Kohl, Andrew~J. Ballard, Andrew Cowie, Bernardino {Romera-Paredes}, Stanislav Nikolov, Rishub Jain, Jonas Adler, Trevor Back, Stig Petersen, David Reiman, Ellen Clancy, Michal Zielinski, Martin Steinegger, Michalina Pacholska, Tamas Berghammer, Sebastian Bodenstein, David Silver, Oriol Vinyals, Andrew~W. Senior, Koray Kavukcuoglu, Pushmeet Kohli, and Demis Hassabis.
 \newblock Highly accurate protein structure prediction with {{AlphaFold}}.
@@ -51,5 +55,9 @@ Xumin Yu, Lulu Tang, Yongming Rao, Tiejun Huang, Jie Zhou, and Jiwen Lu.
 Huang Zhang, Changshuo Wang, Shengwei Tian, Baoli Lu, Liping Zhang, Xin Ning, and Xiao Bai.
 \newblock Deep {{Learning-based 3D Point Cloud Classification}}: {{A Systematic Survey}} and {{Outlook}}.
 \newblock {\em Displays}, 79:102456, September 2023.
+
+\bibitem{zhaoPointTransformer2021}
+Hengshuang Zhao, Li~Jiang, Jiaya Jia, Philip Torr, and Vladlen Koltun.
+\newblock Point {{Transformer}}, September 2021.
 
 \end{thebibliography}
