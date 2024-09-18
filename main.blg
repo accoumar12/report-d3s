@@ -10,46 +10,47 @@ A level-1 auxiliary file: applications.aux
 A level-1 auxiliary file: appendix.aux
 The style file: plain.bst
 Database file #1: SFE_report.bib
+Warning--to sort, need author or key in OfflineDataAugmentation
 Warning--empty publisher in mandelliCAD3DModel2022
-You've used 18 entries,
+You've used 20 entries,
             2118 wiz_defined-function locations,
-            617 strings with 9440 characters,
-and the built_in function-call counts, 7829 in all, are:
-= -- 638
-> -- 707
+            631 strings with 9859 characters,
+and the built_in function-call counts, 8314 in all, are:
+= -- 683
+> -- 726
 < -- 2
-+ -- 280
-- -- 260
-* -- 693
-:= -- 1367
-add.period$ -- 44
-call.type$ -- 18
-change.case$ -- 181
++ -- 288
+- -- 266
+* -- 727
+:= -- 1441
+add.period$ -- 49
+call.type$ -- 20
+change.case$ -- 190
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 164
-empty$ -- 436
-format.name$ -- 260
-if$ -- 1508
+cite$ -- 22
+duplicate$ -- 182
+empty$ -- 483
+format.name$ -- 266
+if$ -- 1613
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 7
-newline$ -- 82
-num.names$ -- 38
-pop$ -- 239
+int.to.str$ -- 20
+missing$ -- 8
+newline$ -- 91
+num.names$ -- 40
+pop$ -- 251
 preamble$ -- 1
-purify$ -- 164
+purify$ -- 171
 quote$ -- 0
-skip$ -- 148
+skip$ -- 163
 stack$ -- 0
-substring$ -- 220
-swap$ -- 28
+substring$ -- 242
+swap$ -- 30
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 70
-warning$ -- 1
-while$ -- 47
-width$ -- 20
-write$ -- 167
-(There was 1 warning)
+type$ -- 78
+warning$ -- 2
+while$ -- 50
+width$ -- 22
+write$ -- 185
+(There were 2 warnings)

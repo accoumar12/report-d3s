@@ -1,4 +1,4 @@
-\babel@toc {french}{}\relax 
+\babel@toc {english}{}\relax 
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {chapter}{Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}D3S, a leader in 3D CAD Analytics}{1}{section.1.1}%
@@ -11,14 +11,16 @@
 \contentsline {chapter}{\numberline {3}Method}{7}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Labeling application}{7}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Triplet loss training}{9}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Triplets generation}{10}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Triplets generation}{11}{section.3.3}%
 \contentsline {chapter}{\numberline {4}Experiments}{13}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Training setups}{13}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Graph-based models}{13}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Transformer-based models}{13}{section.4.3}%
-\contentsline {chapter}{Conclusion}{17}{chapter*.17}%
-\contentsline {chapter}{\numberline {5}Applications and perspectives}{19}{chapter.5}%
-\contentsline {chapter}{Applications and perspectives}{19}{chapter.5}%
-\contentsline {section}{\numberline {.1}Triplets generation heuristics}{20}{section.Alph0.1}%
-\contentsline {subsection}{\numberline {.1.1}Triplets selection}{20}{subsection.Alph0.1.1}%
-\contentsline {subsection}{\numberline {.1.2}Triplets filtering}{21}{subsection.Alph0.1.2}%
+\contentsline {subsection}{\numberline {4.1.1}Data}{13}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Triplets metrics}{15}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Graph-based models}{16}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Transformer-based models}{16}{section.4.3}%
+\contentsline {chapter}{Conclusion}{19}{chapter*.18}%
+\contentsline {chapter}{\numberline {5}Applications and perspectives}{21}{chapter.5}%
+\contentsline {chapter}{Applications and perspectives}{21}{chapter.5}%
+\contentsline {section}{\numberline {.1}Triplets generation heuristics}{22}{section.Alph0.1}%
+\contentsline {subsection}{\numberline {.1.1}Triplets selection}{22}{subsection.Alph0.1.1}%
+\contentsline {subsection}{\numberline {.1.2}Triplets filtering}{23}{subsection.Alph0.1.2}%

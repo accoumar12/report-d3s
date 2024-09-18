@@ -1,5 +1,9 @@
 \begin{thebibliography}{10}
 
+\bibitem{OfflineDataAugmentation}
+Offline {{Data Augmentation}}.
+\newblock https://docs.nvidia.com/tao/tao-toolkit/text/data\_services/augment.html.
+
 \bibitem{dengPPFNetGlobalContext2018}
 Haowen Deng, Tolga Birdal, and Slobodan Ilic.
 \newblock {{PPFNet}}: {{Global Context Aware Local Features}} for {{Robust 3D Point Matching}}, March 2018.
@@ -30,6 +34,11 @@ Minghua Liu, Ruoxi Shi, Kaiming Kuang, Yinhao Zhu, Xuanlin Li, Shizhong Han, Hon
 L.~Mandelli and Stefano Berretti.
 \newblock {\em {{CAD 3D Model}} Classification by {{Graph Neural Networks}}: {{A}} New Approach Based on {{STEP}} Format}.
 \newblock October 2022.
+
+\bibitem{popRotationInvariantGraph2023}
+Alexandru Pop, Victor Dom{\textcommabelow s}a, and Levente Tamas.
+\newblock Rotation {{Invariant Graph Neural Network}} for {{3D Point Clouds}}.
+\newblock {\em Remote Sensing}, 15(5):1437, January 2023.
 
 \bibitem{radfordLearningTransferableVisual2021}
 Alec Radford, Jong~Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, Gretchen Krueger, and Ilya Sutskever.

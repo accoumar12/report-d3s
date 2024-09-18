@@ -24,11 +24,17 @@
 
 ### Training setups
 
+#### Data
+
+#### Triplets metrics
+
 - Discuss the use of Singular Value Decomposition (SVD) at some point and the decision not to use it to avoid "wooden leg"
 
 ### Graph based models
 
 Importance of Batch normalisation
+margin
+different distances used
 triplet loss training Notoriously hard
 
 ### Transformer based models

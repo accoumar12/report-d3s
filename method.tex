@@ -52,21 +52,24 @@ Additional gamification elements were considered at one point, but they were dee
 \section{Triplet loss training}
 \label{sec:triplet-loss-training}
 
-The goal is to learn a representation of data such that similar instances are close together in the representation space, while dissimilar instances are far apart. We are going to use a triplet loss approach to train our encoder model. Once we will have our embeddings, the cosine similarity will be used to define a distance among the data points.
+The goal is to learn a representation of data such that similar instances are close together in the representation space, while dissimilar instances are far apart. We are going to use a triplet loss approach to train our encoder model. Once we will have our embeddings, the \textbf{cosine similarity} will be used to define a distance among the data points.
 
-To formalize, the loss will be defined over triplets of embeddings:
+$$d(x, y) = 1 - \frac{x \cdot y}{\|x\| \|y\|}$$
+
+The loss will be defined over triplets of embeddings:
 \begin{itemize}
   \item An anchor.
   \item A positive, of the same class as the anchor.
   \item A negative, of a different class than the anchor.
 \end{itemize}
 
-\vspace{0.3cm}
+\vspace{0.2cm}
 
-Given a batch size $N$, a distance function $d$, a margin $margin$ and $a$, $p$ and $n$ tensors representing anchor, positive and negative, respectively.
+Given a batch size $N$, a distance function $d$, a margin $margin$ and $a$, $p$ and $n$ tensors representing anchor, positive and negative examples, respectively.
 
 $\ell(a, p, n)=L=\left\{l_1, \ldots, l_N\right\}^{\top}, \quad l_i=\max \left\{d\left(a_i, p_i\right)-d\left(a_i, n_i\right)+\text { margin }, 0\right\}$
 
+Input tensors $a$, $p$ and $n$ are of shape $(N, D)$, where $D$ is the embedding dimension. The loss $l_i$ is computed for each triplet in the batch, and the final loss is the mean of all individual losses.
 
 Intuitively, you aim to group the data into separate clusters, ensuring that each class forms its own cluster. However, the precise distance between clusters isn't a concern, as long as they remain clearly distinct. Without limiting the loss, the model could improve by pushing an easy negative example very far away, while neglecting more challenging negative examples. By capping the reward beyond a certain distance, the model is encouraged to focus on the harder examples to continue improving.
 
@@ -86,7 +89,11 @@ Based on the definition of the loss, there are three categories of triplets:
 
 The balance of these triplet types is crucial for the model's performance, as we will see in TODO.
 
-Before delving deeper into working on triplet loss, we had to first ensure that training a triplet loss model with 'fake triplets' generated from our labeled dataset yielded similar results to a classification model trained on the same dataset. 
+Before delving deeper into working on triplet loss, we had to first ensure that training a triplet loss model with 'fake triplets' generated from our labeled dataset yielded similar results to a classification model trained on the same dataset. To do so, a GNN based on the EdgeConv architecure \cite{wangDynamicGraphCNN2019} was used. 
+
+The performance of the classification model was evaluated against the triplet loss model using a nearest neighbor approach. This method assessed how often a piece's label matched that of its closest neighbor in the learned representation space. Both models achieved a 95\% accuracy rate, suggesting that the triplet loss model successfully learned to create meaningful representations of the data. It is important to emphasize that at this point only triplets generated from the labels were used, and no human labeling was done. Triplets are generated following the same approach as in \autoref{sec:triplet-generation-heuristics}, but ensuring that the anchor and the positive are indeed of the same class. 
+
+With just 1000 triplets, the model achieved a nearest neighbor accuracy similar to the classification model. However, optimal performance was observed when using approximately 10000 triplets, which resulted in a 95\% accuracy rate.
 
 \section{Triplets generation}
 \label{sec:triplet-generation}
@@ -94,7 +101,7 @@ Before delving deeper into working on triplet loss, we had to first ensure that 
 There is still the question of how to generate the triplets that are going to be labeled by the user of the app. Let's draw the properties of the triplets we want to generate, ordered by ease of implementation:
 \begin{enumerate}
   \item The triplets should be diverse enough to cover the entire dataset.
-  \item Almost every triplet should be 'labelable'. A triplet is 'labelable' if users does not have to skip it. This is a mainly a user experience concern. 
+  \item Almost every triplet should be 'labelable'. A triplet is 'labelable' if users do not have to skip it. This is a mainly a user experience concern. 
   \item A great proportion of triplets should be 'hard triplets' for the model that generated them, ie triplets where the negative is hard. This will force the next iteration of the model to learn from its misconceptions.
 \end{enumerate}
 
