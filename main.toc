@@ -12,12 +12,11 @@
 \contentsline {section}{\numberline {3.1}Labeling application}{7}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Triplet loss training}{9}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Triplets generation}{10}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Un chapitre}{13}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Analyse aux limites}{13}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Quelques détails sur cette méthode}{14}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}On n'est jamais très fort pour ce calcul}{15}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Vérification par simulation numérique}{15}{section.4.2}%
-\contentsline {chapter}{Conclusion}{17}{chapter*.13}%
+\contentsline {chapter}{\numberline {4}Experiments}{13}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Training setups}{13}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Graph-based models}{13}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Transformer-based models}{13}{section.4.3}%
+\contentsline {chapter}{Conclusion}{17}{chapter*.17}%
 \contentsline {chapter}{\numberline {5}Applications and perspectives}{19}{chapter.5}%
 \contentsline {chapter}{Applications and perspectives}{19}{chapter.5}%
 \contentsline {section}{\numberline {.1}Triplets generation heuristics}{20}{section.Alph0.1}%

@@ -16,11 +16,15 @@
 
 ### Labeling tool
 
-### Triplets generation
-
 ### Triplet loss training
 
+### Triplets generation
+
 ## Experiments
+
+### Training setups
+
+- Discuss the use of Singular Value Decomposition (SVD) at some point and the decision not to use it to avoid "wooden leg"
 
 ### Graph based models
 

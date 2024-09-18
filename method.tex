@@ -86,6 +86,8 @@ Based on the definition of the loss, there are three categories of triplets:
 
 The balance of these triplet types is crucial for the model's performance, as we will see in TODO.
 
+Before delving deeper into working on triplet loss, we had to first ensure that training a triplet loss model with 'fake triplets' generated from our labeled dataset yielded similar results to a classification model trained on the same dataset. 
+
 \section{Triplets generation}
 \label{sec:triplet-generation}
 
@@ -101,7 +103,7 @@ A simple yet effective way has been proposed to generate triplets. For the initi
 
 With such a method, property 1 is straightforward to achieve, as a random selection of triplets will cover the entire dataset. Property 2 and 3 are in conflict, as a triplet that is easy to label is likely to be easy for the model as well. Considering the limits, selecting candidates that are equidistant from the anchor is intriguing, but tends to result in many 'skipped' triplets. Conversely, choosing candidates where the first is closer than the second will lead to fewer skipped triplets, but also a lower proportion of semi-hard and hard triplets.
 
-A proper balance must be found
+It's why a proper balance has to be found, as explained in \autoref{sec:triplet-generation-heuristics}.
 
 %%% Local Variables: 
 %%% mode: latex
