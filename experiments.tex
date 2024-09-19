@@ -69,7 +69,8 @@ We also experienced online data augmentation, where random rotations are applied
     \label{fig:augmented_data_comparison}
 \end{figure}
 
-\subsection{Triplets metrics}
+\subsection{Triplets metrics} 
+\label{sec:triplet-metrics}
 
 As is described in TODO, training a triplet loss model is notoriously difficult. To better monitor the training process, several metrics were defined:
 \begin{itemize}
@@ -99,15 +100,37 @@ Given a graph with $N$ nodes, $F$ features and a feature matrix $X$ ($N$ rows, $
 
 This combination allows the model to learn both local and global graph features effectively. The model works well because it can capture complex relationships in graph data, is scalable to different graph sizes, and learns hierarchical representations through stacked layers.
 
-Here are a few recommandations we gathered along the way:
+Here are a few key learnings we gathered along the way:
 
 \paragraph{Use batch normalization}
 
 Batch normalization \cite{ioffeBatchNormalizationAccelerating2015} turns out to be a crucial component for training our model. Not only does it speed up the training process, but it also improves the model's performance. This is particularly true for a similarity model, where the model must learn to differentiate between pieces based on their cosine similarity. Dropout was also used in order to prevent overfitting.
 
+\paragraph{Use large batch sizes}
+
+Batching graph data is challenging because the number of nodes in each graph can vary. A dynamic batching strategy was implemented to handle this issue, fixing a maximum number of nodes per graph.
+The size of the batch has a real impact on the model's performance. A larger batch size allows the model to learn more effectively, as it allows a greater triplets diversity within a single batch. We particularly observed this significance due to a change in the mesher for company-related reasons. Indeed, switching from Gmsh \cite{GmshThreedimensionalFinite} to BRepMesh\_IncrementalMesh \cite{BRepMesh_IncrementalMeshClassReference} led to different mesh sizes and configurations. The meshes generated from the BRepMesh were more complex, which reduced inevitably the batch size during training. We experienced a drop in the model's performance, but still good results. This shows the relative flexibility of such a model to adapt to different mesh format. This experience motivated us to explore the use of point clouds methods, such as the transformer-based model. These are more flexible because a uniform sampling can be applied to any mesh.
+
 \paragraph{Insights into the triplet loss}
 
 Triplet loss is notoriously difficult to train. Both the distance function and the margin can have a significant impact on the model's performance. The euclidean distance, notably used in FaceNet \cite{schroffFaceNetUnifiedEmbedding2015}, was tested but ultimately discarded in favor of the cosine similarity. The cosine similarity tends to be more robust to rotation changes, which is crucial for our model. The margin was set to 0.5, as it yielded the best results.
+
+We soon encountered the problem of the loss rapidly converging to 0. It's why we added the triplets metrics introduced in \autoref{sec:triplet-metrics} to better monitor the training process.
+Despite the loss trending towards zero, the classification accuracy began to decline just a few epochs after reaching peak values.
+It became evident that many of the triplets were quickly classified as 'easy triplets' by the network. At this juncture, it was unclear whether the subsequent training performance was affected by the model architecture or the training loop itself.
+
+To address the issue, in addition to adjusting the learning rates and dropout parameters, we implemented online triplets filtering within each batch, in order not to take into account certain type of triplets within the reduction. Indeed, the loss is rapidly converging to 0 because most of the elements within the reduction equal to 0.
+
+
+In order of their performance:
+\begin{enumerate}
+    \item \textbf{Hard + Semi-Hard triplets filtering}: This approach involves only keeping the hard and semi-hard triplets. 
+    \item \textbf{Semi-Hard triplets filtering}: This approach involves only keeping the semi-hard triplets.
+    \item \textbf{Hard triplets filtering}: This approach involves only keeping the hard triplets.
+\end{enumerate}
+
+Since we are working in an unsupervised setting, it is not possible to generate triplets on the fly, like is suggested in \cite{moindrotTripletLossOnline2018}. Also, triplets that are classified as easy triplets at a given epoch can't just be discarded from the training set, as they might become hard triplets at a later epoch.
+
 
 \label{sec:graph-based-models}
 \begin{figure}[]
@@ -117,9 +140,23 @@ Triplet loss is notoriously difficult to train. Both the distance function and t
     \label{fig:key_metrics_evolution_gnn}
 \end{figure}
 
+As shown in \autoref{fig:key_metrics_evolution_gnn}, the model quickly reaches a great accuracy on the test set. However, the original triplets order metrics starts decreasing after a few epochs, even if the loss continues to decrease. This shows the limitations of this architecture, as it is not able to further learn the correct order of the triplets. This tendency will be fixed by using a transformer-based model.
+
 
 \section{Transformer-based models}
 \label{sec:transformer-based-models}
+
+As explained previously, several points made us pivot towards point cloud transformer models.
+\begin{itemize}
+    \item Growing popularity of point cloud transformer models in the field of 3D data processing.
+    \item Flexibility of point cloud models. They are less dependent on the input mesh format, as a uniform sampling can be applied to any mesh.
+    \item Easy switch from a mesh to a point cloud format.
+\end{itemize}
+
+The goal was to study the performance of a pre-trained encoding model our on data, as well as a fine-tuned model with our triplets. Several backbones were tested, such as ReCon++ \cite{qiShapeLLMUniversal3D2024} or PointTransformer \cite{zhaoPointTransformer2021}. The best results were obtained with the OpenShape model \cite{liuOpenShapeScaling3D2023}. Indeed, the pre-trained model already showed improved performance in comparison with our best GNN model, as it can be seen from the starting performance in \autoref{fig:key_metrics_evolution_openshape}. The fine-tuned model was able to reach even better results, as shown in \autoref{fig:key_metrics_evolution_openshape}.
+
+We can clearly see the increasing metrics as the loss decreases, which was clearly not the case with the GNN model. The model is able to learn the correct order of the triplets, as shown by the original triplets order metrics. The rotation metrics are also improving, as shown in \autoref{fig:rotation_metrics_evolution_openshape}.
+This highlights the remarkable ability of transformers architectures to learn intricate patterns in the data, regardless of its nature.
 
 \begin{figure}[]
     \centering
@@ -139,8 +176,10 @@ Triplet loss is notoriously difficult to train. Both the distance function and t
         \caption{Rotation matching accuracy.}
     \end{subfigure}
     \caption{Fine-tuned model rotation accuracies.}
+    \label{fig:rotation_metrics_evolution_openshape}
 \end{figure}
 
+As a final benchmark, we compared in the interface the nearest neighbors of a piece given by the transformer pre-trained model and by the fine-tuned model. Even if fine-tuned model is better in terms of metrics, the qualitative results are not always better. This shows the limitations of the metrics and the importance of the interface to validate the final model's performance, especially in our unsupervised setting.
 %%% Local Variables: 
 %%% mode: latex
 %%% TeX-master: "isae-report-template"

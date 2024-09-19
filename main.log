@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.27)  19 SEP 2024 11:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.27)  19 SEP 2024 16:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -964,70 +964,71 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [16 <./images/mean_rotated_data_augmentation_type.png> <./images/median_rotated_data_augmentation_type.png>]
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 113.
-
-<images/key_metrics_evolution_gnn.png, id=381, 401.8212pt x 307.1475pt>
-File: images/key_metrics_evolution_gnn.png Graphic file (type png)
-<use images/key_metrics_evolution_gnn.png>
-Package pdftex.def Info: images/key_metrics_evolution_gnn.png  used on input line 115.
-(pdftex.def)             Requested size: 230.36061pt x 176.08821pt.
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 124.
-
-<images/key_metrics_evolution_openshape.png, id=382, 401.8212pt x 307.1475pt>
-File: images/key_metrics_evolution_openshape.png Graphic file (type png)
-<use images/key_metrics_evolution_openshape.png>
-Package pdftex.def Info: images/key_metrics_evolution_openshape.png  used on input line 126.
-(pdftex.def)             Requested size: 230.36061pt x 176.08821pt.
-
-Underfull \vbox (badness 7238) has occurred while \output is active []
-
-
-
 [17]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 131.
+               Default added (so using `tbp') on input line 136.
 
-<images/rotation_metrics_evolution_openshape.png, id=390, 401.8212pt x 307.1475pt>
+<images/key_metrics_evolution_gnn.png, id=395, 401.8212pt x 307.1475pt>
+File: images/key_metrics_evolution_gnn.png Graphic file (type png)
+<use images/key_metrics_evolution_gnn.png>
+Package pdftex.def Info: images/key_metrics_evolution_gnn.png  used on input line 138.
+(pdftex.def)             Requested size: 230.36061pt x 176.08821pt.
+
+
+[18]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 161.
+
+<images/key_metrics_evolution_openshape.png, id=411, 401.8212pt x 307.1475pt>
+File: images/key_metrics_evolution_openshape.png Graphic file (type png)
+<use images/key_metrics_evolution_openshape.png>
+Package pdftex.def Info: images/key_metrics_evolution_openshape.png  used on input line 163.
+(pdftex.def)             Requested size: 230.36061pt x 176.08821pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 168.
+
+<images/rotation_metrics_evolution_openshape.png, id=412, 401.8212pt x 307.1475pt>
 File: images/rotation_metrics_evolution_openshape.png Graphic file (type png)
 <use images/rotation_metrics_evolution_openshape.png>
-Package pdftex.def Info: images/rotation_metrics_evolution_openshape.png  used on input line 133.
+Package pdftex.def Info: images/rotation_metrics_evolution_openshape.png  used on input line 170.
 (pdftex.def)             Requested size: 230.36061pt x 176.08821pt.
-<images/rotation_accuracy_evolution_openshape.png, id=391, 401.8212pt x 307.8702pt>
+<images/rotation_accuracy_evolution_openshape.png, id=413, 401.8212pt x 307.8702pt>
 File: images/rotation_accuracy_evolution_openshape.png Graphic file (type png)
 <use images/rotation_accuracy_evolution_openshape.png>
-Package pdftex.def Info: images/rotation_accuracy_evolution_openshape.png  used on input line 138.
+Package pdftex.def Info: images/rotation_accuracy_evolution_openshape.png  used on input line 175.
 (pdftex.def)             Requested size: 230.36061pt x 176.50253pt.
 
-Overfull \hbox (2.61047pt too wide) in paragraph at lines 132--141
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 169--178
 []$[]$  $[]$ 
  []
 
 )
 
-[18 <./images/key_metrics_evolution_gnn.png> <./images/key_metrics_evolution_openshape.png>]
+[19 <./images/key_metrics_evolution_gnn.png>]
 
-[19 <./images/rotation_metrics_evolution_openshape.png> <./images/rotation_accuracy_evolution_openshape.png>]
+[20 <./images/key_metrics_evolution_openshape.png> <./images/rotation_metrics_evolution_openshape.png> <./images/rotation_accuracy_evolution_openshape.png>]
+
+[21]
 \openout2 = `conclusion.aux'.
 
  (./conclusion.tex
 
-[20
+[22
 
 
 
 
 ])
 
-[21]
+[23]
 \openout2 = `applications.aux'.
 
  (./applications.tex
 
-[22
+[24
 
 
 
@@ -1038,7 +1039,7 @@ Chapter 5.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 7.
 
-<images/clusters_pca.png, id=417, 720.44156pt x 564.60938pt>
+<images/clusters_pca.png, id=444, 720.44156pt x 564.60938pt>
 File: images/clusters_pca.png Graphic file (type png)
 <use images/clusters_pca.png>
 Package pdftex.def Info: images/clusters_pca.png  used on input line 9.
@@ -1047,16 +1048,16 @@ Package pdftex.def Info: images/clusters_pca.png  used on input line 9.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 14.
 
-<images/clusters_tsne.png, id=418, 612.03656pt x 550.30594pt>
+<images/clusters_tsne.png, id=445, 612.03656pt x 550.30594pt>
 File: images/clusters_tsne.png Graphic file (type png)
 <use images/clusters_tsne.png>
 Package pdftex.def Info: images/clusters_tsne.png  used on input line 16.
 (pdftex.def)             Requested size: 322.50345pt x 289.97296pt.
 )
 
-[23]
+[25]
 
-[24 <./images/clusters_pca.png> <./images/clusters_tsne.png>]
+[26 <./images/clusters_pca.png> <./images/clusters_tsne.png>]
 \openout2 = `appendix.aux'.
 
  (./appendix.tex
@@ -1064,7 +1065,7 @@ Package pdftex.def Info: images/clusters_tsne.png  used on input line 16.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 18.
 
-<images/triplet_generation.png, id=430, 382.42876pt x 359.3425pt>
+<images/triplet_generation.png, id=459, 382.42876pt x 359.3425pt>
 File: images/triplet_generation.png Graphic file (type png)
 <use images/triplet_generation.png>
 Package pdftex.def Info: images/triplet_generation.png  used on input line 20.
@@ -1074,53 +1075,63 @@ Underfull \vbox (badness 1527) has occurred while \output is active []
 
 
 
-[25
+[27
 
 
 
  <./images/triplet_generation.png>])
 
-[26] (./main.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 4--6
+[28] (./main.bbl
+Overfull \hbox (163.78328pt too wide) in paragraph at lines 4--6
+\T1/cmr/m/n/12 men-ta-tion.  https://dev.opencascade.org/doc/refman/html/class_b_rep_mesh___incremental_mesh.html#details. 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--14
 []\T1/cmr/m/n/12 Offline Data Aug-men-ta-tion.  https://docs.nvidia.com/tao/tao-
  []
 
 
 
-[27
+[29
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 78--81
+Underfull \hbox (badness 2189) in paragraph at lines 52--55
+[]\T1/cmr/m/n/12 Olivier Moin-drot.  Triplet Loss and On-line Triplet Min-ing in Ten-sor-Flow.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--98
 []\T1/cmr/m/n/12 Lilian Weng.  Con-trastive Rep-re-sen-ta-tion Learn-ing.
  []
 
 
 
-[28])
+[30])
 
-[29] (./main.aux (./introduction.aux) (./related_work.aux) (./method.aux) (./experiments.aux) (./conclusion.aux) (./applications.aux) (./appendix.aux))
+[31] (./main.aux (./introduction.aux) (./related_work.aux) (./method.aux) (./experiments.aux) (./conclusion.aux) (./applications.aux) (./appendix.aux))
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-05-27>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 07BF5B4FA889BC9802F22ACCC01D2526;3359.
+(rerunfilecheck)             Checksum: 2843D3D78762D631E726EF3D163EB9C3;3359.
  ) 
 Here is how much of TeX's memory you used:
- 37082 strings out of 473584
- 864135 string characters out of 5728334
+ 37098 strings out of 473584
+ 864508 string characters out of 5728334
  1938905 words of memory out of 5000000
- 59203 multiletter control sequences out of 15000+600000
+ 59209 multiletter control sequences out of 15000+600000
  574977 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,93p,2145b,675s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (35 pages, 1303996 bytes).
+Output written on main.pdf (37 pages, 1311123 bytes).
 PDF statistics:
- 556 PDF objects out of 1000 (max. 8388607)
- 443 compressed objects within 5 object streams
- 111 named destinations out of 1000 (max. 500000)
+ 588 PDF objects out of 1000 (max. 8388607)
+ 473 compressed objects within 5 object streams
+ 121 named destinations out of 1000 (max. 500000)
  297 words of extra memory for PDF output out of 10000 (max. 10000000)
 

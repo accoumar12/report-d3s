@@ -11,46 +11,48 @@ A level-1 auxiliary file: appendix.aux
 The style file: plain.bst
 Database file #1: SFE_report.bib
 Warning--to sort, need author or key in OfflineDataAugmentation
+Warning--to sort, need author or key in GmshThreedimensionalFinite
+Warning--to sort, need author or key in BRepMesh_IncrementalMeshClassReference
 Warning--empty publisher in mandelliCAD3DModel2022
-You've used 22 entries,
+You've used 26 entries,
             2118 wiz_defined-function locations,
-            642 strings with 10351 characters,
-and the built_in function-call counts, 8857 in all, are:
-= -- 730
-> -- 762
+            662 strings with 11267 characters,
+and the built_in function-call counts, 9806 in all, are:
+= -- 812
+> -- 814
 < -- 2
-+ -- 302
-- -- 278
-* -- 760
-:= -- 1532
-add.period$ -- 54
-call.type$ -- 22
-change.case$ -- 202
++ -- 324
+- -- 296
+* -- 815
+:= -- 1675
+add.period$ -- 63
+call.type$ -- 26
+change.case$ -- 223
 chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 196
-empty$ -- 527
-format.name$ -- 278
-if$ -- 1726
+cite$ -- 30
+duplicate$ -- 224
+empty$ -- 617
+format.name$ -- 296
+if$ -- 1932
 int.to.chr$ -- 0
-int.to.str$ -- 22
+int.to.str$ -- 26
 missing$ -- 8
-newline$ -- 100
-num.names$ -- 44
-pop$ -- 272
+newline$ -- 117
+num.names$ -- 48
+pop$ -- 312
 preamble$ -- 1
-purify$ -- 181
+purify$ -- 198
 quote$ -- 0
-skip$ -- 179
+skip$ -- 210
 stack$ -- 0
-substring$ -- 252
-swap$ -- 32
+substring$ -- 272
+swap$ -- 36
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 86
-warning$ -- 2
-while$ -- 54
-width$ -- 24
-write$ -- 203
-(There were 2 warnings)
+type$ -- 102
+warning$ -- 4
+while$ -- 58
+width$ -- 28
+write$ -- 235
+(There were 4 warnings)

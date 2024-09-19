@@ -13,10 +13,10 @@
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Illustration of the issue using PCA as a preprocessing step. Both pieces are tubular structures, shown in their default orientation and in the canonical reference frame. While the piece on the left aligns its first principal axis with the tube's axis, the piece on the right does not. This inconsistency can result in misalignment during training, particularly since the behavior varies depending on the specific piece.}}{14}{figure.caption.12}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Influence of the number of rotations on the rotations metrics.}}{15}{figure.caption.13}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Influence of the type of data augmentation on the rotations metrics.}}{16}{figure.caption.14}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces GNN model key metrics accuracies.}}{18}{figure.caption.17}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Fine-tuned model key metrics accuracies.}}{18}{figure.caption.18}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Fine-tuned model rotation accuracies.}}{19}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces GNN model key metrics accuracies.}}{19}{figure.caption.18}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Fine-tuned model key metrics accuracies.}}{20}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Fine-tuned model rotation accuracies.}}{20}{figure.caption.20}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces PCA clustering of spherified sample embeddings.}}{24}{figure.caption.21}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces t-SNE clustering of spherified sample embeddings.}}{24}{figure.caption.22}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Triplet selection process. An "anchor" point is selected, and a "positive" point is found at a fixed target distance. A "negative" point is then found at a distance defined by the target distance plus a delta percentage. How far is the negative point matters a lot. If negative 1 is chosen, the triplet will likely be easy to label, but will not bring a lot of value to the model. If negative 2 is chosen, the triplet will likely be hard to label (and thus skipped), but will bring a lot of value to the model.}}{25}{figure.caption.23}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces PCA clustering of spherified sample embeddings.}}{26}{figure.caption.22}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces t-SNE clustering of spherified sample embeddings.}}{26}{figure.caption.23}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Triplet selection process. An "anchor" point is selected, and a "positive" point is found at a fixed target distance. A "negative" point is then found at a distance defined by the target distance plus a delta percentage. How far is the negative point matters a lot. If negative 1 is chosen, the triplet will likely be easy to label, but will not bring a lot of value to the model. If negative 2 is chosen, the triplet will likely be hard to label (and thus skipped), but will bring a lot of value to the model.}}{27}{figure.caption.24}%
