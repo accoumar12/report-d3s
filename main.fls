@@ -558,6 +558,16 @@ OUTPUT applications.aux
 INPUT ./applications.tex
 INPUT ./applications.tex
 INPUT applications.tex
+INPUT ./images/clusters_pca.png
+INPUT ./images/clusters_pca.png
+INPUT ./images/clusters_pca.png
+INPUT ./images/clusters_pca.png
+INPUT ./images/clusters_pca.png
+INPUT ./images/clusters_tsne.png
+INPUT ./images/clusters_tsne.png
+INPUT ./images/clusters_tsne.png
+INPUT ./images/clusters_tsne.png
+INPUT ./images/clusters_tsne.png
 INPUT ./appendix.tex
 INPUT ./appendix.tex
 OUTPUT appendix.aux

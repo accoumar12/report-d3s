@@ -21,6 +21,11 @@ Weifeng Ge, Weilin Huang, Dengke Dong, and Matthew~R. Scott.
 Alexander Hermans, Lucas Beyer, and Bastian Leibe.
 \newblock In {{Defense}} of the {{Triplet Loss}} for {{Person Re-Identification}}, November 2017.
 
+\bibitem{ioffeBatchNormalizationAccelerating2015}
+Sergey Ioffe and Christian Szegedy.
+\newblock Batch {{Normalization}}: {{Accelerating Deep Network Training}} by {{Reducing Internal Covariate Shift}}.
+\newblock https://arxiv.org/abs/1502.03167v3, February 2015.
+
 \bibitem{jumperHighlyAccurateProtein2021}
 John Jumper, Richard Evans, Alexander Pritzel, Tim Green, Michael Figurnov, Olaf Ronneberger, Kathryn Tunyasuvunakool, Russ Bates, Augustin {\v Z}{\'i}dek, Anna Potapenko, Alex Bridgland, Clemens Meyer, Simon A.~A. Kohl, Andrew~J. Ballard, Andrew Cowie, Bernardino {Romera-Paredes}, Stanislav Nikolov, Rishub Jain, Jonas Adler, Trevor Back, Stig Petersen, David Reiman, Ellen Clancy, Michal Zielinski, Martin Steinegger, Michalina Pacholska, Tamas Berghammer, Sebastian Bodenstein, David Silver, Oriol Vinyals, Andrew~W. Senior, Koray Kavukcuoglu, Pushmeet Kohli, and Demis Hassabis.
 \newblock Highly accurate protein structure prediction with {{AlphaFold}}.
@@ -39,6 +44,10 @@ L.~Mandelli and Stefano Berretti.
 Alexandru Pop, Victor Dom{\textcommabelow s}a, and Levente Tamas.
 \newblock Rotation {{Invariant Graph Neural Network}} for {{3D Point Clouds}}.
 \newblock {\em Remote Sensing}, 15(5):1437, January 2023.
+
+\bibitem{qiPointNetDeepHierarchical2017}
+Charles~R. Qi, Li~Yi, Hao Su, and Leonidas~J. Guibas.
+\newblock {{PointNet}}++: {{Deep Hierarchical Feature Learning}} on {{Point Sets}} in a {{Metric Space}}, June 2017.
 
 \bibitem{radfordLearningTransferableVisual2021}
 Alec Radford, Jong~Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, Gretchen Krueger, and Ilya Sutskever.

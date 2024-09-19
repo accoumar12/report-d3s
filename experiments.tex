@@ -76,15 +76,39 @@ As is described in TODO, training a triplet loss model is notoriously difficult.
     \item \textbf{Train easy triplets proportion}: This metric computes the proportion of easy triplets in the training set. An easy triplet results in a loss of 0.
     \item \textbf{Test easy triplets proportion}: This metric computes the proportion of easy triplets in the test set. 
     \item \textbf{Training triplets order}: This metrics computes the proportion of triplets that are 'correctly' ordered. A triplet is correctly ordered if the distance between the anchor and positive is less than the distance between the anchor and negative. This is the same as an easy triplet proportion for a triplet loss with margin 0.
-    \item \textbf{Test triplets order}: This metrics computes the proportion of triplets that are 'correctly' ordered in the test set.
+    \item \textbf{Original triplets order}: This metrics computes the proportion of triplets that are 'correctly' ordered in the original dataset. It is important to notice here that these triplets do not belong to the training triplets, because the training triplets are augmented with random rotations.
 \end{itemize}
-
 
 Proportions of the training data were incorporated to analyze the model's behavior when converging to a loss of 0. The order of triplets was included to both assess the impact of the margin on triplet loss and to align with the fact that this order ultimately matters, as it's the one used by app users for labeling.
 
-In addition to the rotation metrics, we also computed the accuracy of the model on the small labeled dataset by evaluating the proportion of pieces which nearest neighbor shares the same label. This metric is referred to as the \textbf{test accuracy}.
+In addition to these metrics, we also computed the accuracy of the model on the small labeled dataset by evaluating the proportion of pieces which nearest neighbor shares the same label. This metric is referred to as the \textbf{test accuracy}. We had to keep in mind that this accuracy gives a biased view of the model's performance, as the labeled dataset is not representative of the whole dataset.
+
+We had also a heavy use of the interface to validate the model's performance qualitatively. Indeed better metrics do not always correlate with better real performance as it is shown in TODOS.
 
 \section{Graph-based models}
+
+Our original architecture involved a GNN model based on EdgeConv \cite{wangDynamicGraphCNN2019} convolution layers along with max pooling layers. 
+
+Different convolution layers were tested for our backbone encoder, including Pointnet \cite{qiPointNetDeepHierarchical2017}, FeaStConv \cite{vermaFeaStNetFeatureSteeredGraph2018}, and PointTransformerConv \cite{zhaoPointTransformer2021}. The EdgeConv model was chosen as it yielded the best results.
+
+
+On the one hand, EdgeConv operates on each node's local neighborhood, computing feature transformations for connected edges and aggregating this information. This captures local graph structure and node relationships. 
+
+The max pooling layer then aggregates information across all nodes, creating a fixed-size graph representation that is invariant to the number of nodes and their ordering.
+Given a graph with $N$ nodes, $F$ features and a feature matrix $X$ ($N$ rows, $F$ columns), global max pooling pools this graph into a single node is just one step. To compute the feature vector of this pooled node, it takes the feature-wise maximum across the node dimension of the graph. In other words, global max pooling finds for each feature/column in $X$ the node with the highest value and then takes this value into the pooled node vector. 
+
+This combination allows the model to learn both local and global graph features effectively. The model works well because it can capture complex relationships in graph data, is scalable to different graph sizes, and learns hierarchical representations through stacked layers.
+
+Here are a few recommandations we gathered along the way:
+
+\paragraph{Use batch normalization}
+
+Batch normalization \cite{ioffeBatchNormalizationAccelerating2015} turns out to be a crucial component for training our model. Not only does it speed up the training process, but it also improves the model's performance. This is particularly true for a similarity model, where the model must learn to differentiate between pieces based on their cosine similarity. Dropout was also used in order to prevent overfitting.
+
+\paragraph{Insights into the triplet loss}
+
+Triplet loss is notoriously difficult to train. Both the distance function and the margin can have a significant impact on the model's performance. The euclidean distance, notably used in FaceNet \cite{schroffFaceNetUnifiedEmbedding2015}, was tested but ultimately discarded in favor of the cosine similarity. The cosine similarity tends to be more robust to rotation changes, which is crucial for our model. The margin was set to 0.5, as it yielded the best results.
+
 \label{sec:graph-based-models}
 \begin{figure}[]
     \centering

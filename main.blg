@@ -12,45 +12,45 @@ The style file: plain.bst
 Database file #1: SFE_report.bib
 Warning--to sort, need author or key in OfflineDataAugmentation
 Warning--empty publisher in mandelliCAD3DModel2022
-You've used 20 entries,
+You've used 22 entries,
             2118 wiz_defined-function locations,
-            631 strings with 9859 characters,
-and the built_in function-call counts, 8314 in all, are:
-= -- 683
-> -- 726
+            642 strings with 10351 characters,
+and the built_in function-call counts, 8857 in all, are:
+= -- 730
+> -- 762
 < -- 2
-+ -- 288
-- -- 266
-* -- 727
-:= -- 1441
-add.period$ -- 49
-call.type$ -- 20
-change.case$ -- 190
++ -- 302
+- -- 278
+* -- 760
+:= -- 1532
+add.period$ -- 54
+call.type$ -- 22
+change.case$ -- 202
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 182
-empty$ -- 483
-format.name$ -- 266
-if$ -- 1613
+cite$ -- 24
+duplicate$ -- 196
+empty$ -- 527
+format.name$ -- 278
+if$ -- 1726
 int.to.chr$ -- 0
-int.to.str$ -- 20
+int.to.str$ -- 22
 missing$ -- 8
-newline$ -- 91
-num.names$ -- 40
-pop$ -- 251
+newline$ -- 100
+num.names$ -- 44
+pop$ -- 272
 preamble$ -- 1
-purify$ -- 171
+purify$ -- 181
 quote$ -- 0
-skip$ -- 163
+skip$ -- 179
 stack$ -- 0
-substring$ -- 242
-swap$ -- 30
+substring$ -- 252
+swap$ -- 32
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 78
+type$ -- 86
 warning$ -- 2
-while$ -- 50
-width$ -- 22
-write$ -- 185
+while$ -- 54
+width$ -- 24
+write$ -- 203
 (There were 2 warnings)
