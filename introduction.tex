@@ -19,7 +19,7 @@ The company’s solutions are designed to provide scalable, adaptable, and secur
 
 \vspace{0.5cm}
 
-I have been working with the 3D CAD Analytics team, where my focus was on developing a 3D similarity model designed to compare CAD models solely based on their geometric properties.
+I have been working with the 3D CAD Analytics team, where my focus was on developing a 3D similarity model designed to compare CAD designs solely based on their geometric properties.
 
 \begin{figure}[]
     \centering
@@ -30,20 +30,20 @@ I have been working with the 3D CAD Analytics team, where my focus was on develo
 
 \section{3D similarity model}
 
-3D model designers spend a significant amount of time searching for relevant information during the product design process, even though much of their work could be done by modifying existing Computer-Aided Design (CAD) models. As a result, the retrieval and reuse of CAD models are crucial in CAD model management. However, large CAD model repositories often require extensive categorization or organization of engineering data, making design reuse challenging. Traditionally, the classification and retrieval of 3D CAD models involved a manual process of labeling, which is time-consuming, prone to errors, and inefficient. This issue becomes even more pronounced when models are generated in product development, as inconsistent labeling and tagging across different systems lead to the complex task of data harmonization. Additionally, the inherent complexity of 3D CAD model definitions makes it difficult to apply rigid, general classification rules, as model features and parameters vary depending on their origin. Therefore, an automated approach to classification and retrieval is needed to address these challenges.
+3D model designers spend a significant amount of time searching for relevant information during the product design process, even though much of their work could be done by modifying existing Computer-Aided Design (CAD) designs. As a result, the retrieval and reuse of CAD designs are crucial in CAD design management. However, large CAD design repositories often require extensive categorization or organization of engineering data, making design reuse challenging. Traditionally, the classification and retrieval of 3D CAD designs involved a manual process of labeling, which is time-consuming, prone to errors, and inefficient. This issue becomes even more pronounced when designs are generated in product development, as inconsistent labeling and tagging across different systems lead to the complex task of data harmonization. Additionally, the inherent complexity of 3D CAD design definitions makes it difficult to apply rigid, general classification rules, as design features and parameters vary depending on their origin. Therefore, an automated approach to classification and retrieval is needed to address these challenges.
 
-The goal is to automatically associate a given piece to similar other pieces, as depicted in \autoref{fig:similar-pieces}. This will make it possible to leverage the D3S dataset of industrial 3D models, in order to infer missing information, such as the name of a piece, its function, or its material.
+The goal is to automatically associate a given design to similar other designs, as depicted in \autoref{fig:similar-designs}. This will make it possible to leverage the D3S dataset of industrial 3D designs, in order to infer missing information, such as the name of a design, its function, or its material.
 
 \begin{figure}[]
     \centering
-    \includegraphics[width=0.8\columnwidth]{images/similar-pieces.png}
+    \includegraphics[width=0.8\columnwidth]{images/similar-designs.png}
     \caption{Purpose of our similarity model}
-    \label{fig:similar-pieces}
+    \label{fig:similar-designs}
 \end{figure}
 
 In recent years, point cloud representations has become one of the research hotspots in the field of computer vision \cite{zhangDeepLearningbased3D2023}.
-In our case, we can not directly train a powerful classifier, because of a lack of clean labeled data and of the variety of the possible 3D models.
-The most comprehensive dataset available consists of just 2,000 CAD models, with rather imprecise labeling. Examples of labels include coupling strap, shackle, and long beam. It is evident that there is a significant need for a more curated and accurate dataset in this area, which is really hard to obtain.
+In our case, we can not directly train a powerful classifier, because of a lack of clean labeled data and of the variety of the possible 3D designs.
+The most comprehensive dataset available consists of just 2,000 CAD designs, with rather imprecise labeling. Examples of labels include coupling strap, shackle, and long beam. It is evident that there is a significant need for a more curated and accurate dataset in this area, which is really hard to obtain.
 
 Given the recent success of self-supervised learning methods, more specifically contrastive learning \cite{radfordLearningTransferableVisual2021,yuPointBERTPretraining3D2022,liuOpenShapeScaling3D2023}, an innovative and promising approach has been proposed to tackle this problem.
 
@@ -51,9 +51,8 @@ The goal is to learn a representation of data such that similar instances are cl
 
 To summarize, the pipeline comprises the two main following steps:
 \begin{enumerate}
-    %TODO coherence with other sections
     \item \textbf{Triplets collection}: Offline unlabeled triplets are generated. Triplets are then labeled by the users of the app and stored in the database.
-    \item \textbf{Model training}: An encoding model is trained on the labeled triplets. The model is then used to compute the similarity between two 3D models.
+    \item \textbf{Model training}: An encoding model is trained on the labeled triplets. The model is then used to compute the similarity between two 3D designs.
 \end{enumerate}
 
 \begin{figure}[]

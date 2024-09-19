@@ -1,7 +1,7 @@
 \chapter{Method}
 \label{sec:method}
 
-We propose a method for constructing a similarity model from an unlabeled dataset that contains a small proportion of approximately labeled instances. This method is applied on our use case of 3D CAD models, but it is actually generalizable to other domains. 
+We propose a method for constructing a similarity model from an unlabeled dataset that contains a small proportion of approximately labeled instances. This method is applied on our use case of 3D CAD designs, but it is actually generalizable to other domains. 
 
 Unlabeled triplets are generated from the entire dataset \autoref{sec:triplet-generation}. These triplets are then labeled using a dedicated application \autoref{sec:labeling-application}. Finally, the labeled triplets are used to train a model based on triplet loss \autoref{sec:triplet-loss-training}.
 
@@ -14,34 +14,33 @@ Before delving into the details of the pipeline, it is essential to introduce th
 There are actually two main use cases for the application: labeling triplets (\autoref{fig:labeling_use_case}) and comparing two iterations of a model (\autoref{fig:validation_use_case}).
 
 \begin{itemize}
-  \item \textbf{Labeling triplets:} Users are presented with a triplet of 3D models, with the reference model (anchor) in the center. Their task is to swipe left or right to indicate whether the left or right model is more similar to the anchor model. A skip option is also available for ambiguous cases.
+  \item \textbf{Labeling triplets:} Users are presented with a triplet of 3D designs, with the reference design (anchor) in the center. Their task is to swipe left or right to indicate whether the left or right design is more similar to the anchor design. A skip option is also available for ambiguous cases.
   
-  Users can also change to a canonical view of the models to facilitate the comparison. This changes the perspective of a camera to a view aligned with the model's principal axes. This may or may not be useful depending on the model's geometry, as shown in \autoref{fig:default_vs_canonical}.
+  Users can also change to a canonical view of the designs to facilitate the comparison. This changes the perspective of a camera to a view aligned with the design's principal axes. This may or may not be useful depending on the design's geometry, as shown in \autoref{fig:default_vs_canonical}.
 
 \begin{figure}[]
   \centering
   \includegraphics[width=\columnwidth]{images/default_vs_canonical.png}
-  \caption{Two pieces where the appropriate view is different.}
+  \caption{Two designs where the appropriate view is different.}
   \label{fig:default_vs_canonical}
 \end{figure}
 
-  Additional metadata is also provided to the users, such as the piece length. This information can help users make more informed decisions when the geometry does not suffice.
-  %TODO: change model to piece everywhere
-  \item \textbf{Validation:} A similar interface is used, but now the propositions on the left and right are two nearest neighbors propositions of two different models. Users judge which model gives the best nearest neighbor proposition. This gives an easy way to compare two iterations of a model. This is especially useful to bulletproof the model's performance, ensuring robustness not only in quantitative metrics but also in qualitative assessments.
+  Additional metadata is also provided to the users, such as the design length. This information can help users make more informed decisions when the geometry does not suffice.
+  \item \textbf{Validation:} A similar interface is used, but now the propositions on the left and right are two nearest neighbors propositions of two different designs. Users judge which model gives the best nearest neighbor proposition. This gives an easy way to compare two iterations of a model. This is especially useful to bulletproof the model's performance, ensuring robustness not only in quantitative metrics but also in qualitative assessments.
   
 \end{itemize}
 
 \begin{figure}[]
   \centering
   \includegraphics[width=0.8\columnwidth]{images/tinder3d_labeling.png}
-  \caption{User interface for the labeling use case. Here, the piece on the right is more similar to the anchor piece in the center (curved edges).}
+  \caption{User interface for the labeling use case. Here, the design on the right is more similar to the anchor design in the center (curved edges).}
   \label{fig:labeling_use_case}
 \end{figure}
 
 \begin{figure}[]
   \centering
   \includegraphics[width=0.8\columnwidth]{images/tinder3d_validation.png}
-  \caption{User interface for the validation use case. Here, the proposition of the model on the left is more similar to the anchor piece in the center (two holes at the top).}
+  \caption{User interface for the validation use case. Here, the proposition of the model on the left is more similar to the anchor design in the center (two holes at the top).}
   \label{fig:validation_use_case}
 \end{figure}
 
@@ -91,7 +90,7 @@ The balance of these triplet types is crucial for the model's performance, as we
 
 Before delving deeper into working on triplet loss, we had to first ensure that training a triplet loss model with 'fake triplets' generated from our labeled dataset yielded similar results to a classification model trained on the same dataset. To do so, a GNN based on the EdgeConv architecure \cite{wangDynamicGraphCNN2019} was used. 
 
-The performance of the classification model was evaluated against the triplet loss model using a nearest neighbor approach. This method assessed how often a piece's label matched that of its closest neighbor in the learned representation space. Both models achieved a 95\% accuracy rate, suggesting that the triplet loss model successfully learned to create meaningful representations of the data. It is important to emphasize that at this point only triplets generated from the labels were used, and no human labeling was done. Triplets are generated following the same approach as in \autoref{sec:triplet-generation-heuristics}, but ensuring that the anchor and the positive are indeed of the same class. 
+The performance of the classification model was evaluated against the triplet loss model using a nearest neighbor approach. This method assessed how often a design's label matched that of its closest neighbor in the learned representation space. Both models achieved a 95\% accuracy rate, suggesting that the triplet loss model successfully learned to create meaningful representations of the data. It is important to emphasize that at this point only triplets generated from the labels were used, and no human labeling was done. Triplets are generated following the same approach as in \autoref{sec:triplet-generation-heuristics}, but ensuring that the anchor and the positive are indeed of the same class. 
 
 With just 1000 triplets, the model achieved a nearest neighbor accuracy similar to the classification model. However, optimal performance was observed when using approximately 10000 triplets, which resulted in a 95\% accuracy rate.
 
