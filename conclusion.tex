@@ -3,7 +3,30 @@
 \markboth{Conclusion}{Conclusion}
 \label{sec:conclusion}
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit. Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci vel massa suscipit pulvinar. Nulla sollicitudin. Fusce varius, ligula non tempus aliquam, nunc turpis ullamcorper nibh, in tempus sapien eros vitae ligula. Pellentesque rhoncus nunc et augue. Integer id felis. Curabitur aliquet pellentesque diam. Integer quis metus vitae elit lobortis egestas. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi vel erat non mauris convallis vehicula. Nulla et sapien. Integer tortor tellus, aliquam faucibus, convallis id, congue eu, quam. Mauris ullamcorper felis vitae erat. Proin feugiat, augue non elementum posuere, metus purus iaculis lectus, et tristique ligula justo vitae magna. Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue. Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet.
+This work presents a novel approach to addressing the challenge of 3D CAD design similarity in industrial settings, where large repositories of designs often lack consistent labeling and organization. We developed a pipeline that combines innovative triplet generation techniques, a user-friendly labeling application, and state-of-the-art deep learning models to create an effective similarity model for 3D CAD designs.
+Our key contributions include:
+
+
+\begin{itemize}
+    \item A method for generating unlabeled triplets from an extensive dataset of 3D designs, balancing diversity, labelability, and difficulty.
+    \item A "Tinder-like" application that facilitates efficient human labeling of triplets, incorporating both default and canonical views to aid in comparison.
+    \item An iterative process of model training and triplet generation, allowing the model to continuously improve by learning from its previous misconceptions.
+    \item Experimentation with both graph-based (GNN) and transformer-based models, ultimately finding superior performance with the transformer-based approach.
+\end{itemize}
+
+The experiments conducted demonstrate the effectiveness of our approach. The graph-based model using EdgeConv layers showed promising initial results, achieving high accuracy on the test set. However, it struggled to maintain performance on the original triplet order metric over extended training. The transition to a transformer-based model, specifically using the Openshape encoder architecture, yielded significantly improved results. This model not only maintained high performance across all metrics but also showed continuous improvement in triplet ordering and rotation invariance as training progressed.
+
+One of the main advantages of our approach is its capacity to learn meaningful representations from a relatively small set of labeled triplets. With only 20,000 triplets, we successfully trained a GNN model that exceeded our initial expectations and demonstrated strong performance across multiple metrics, although it falls short of the larger transformer model. The pre-trained version already shows superior results, and fine-tuning further enhances its performance.
+
+However, our work also has some limitations:
+
+\begin{itemize}
+    \item The reliance on human labeling, while mitigated by our efficient application, still introduces a bottleneck in scaling to very large datasets.
+    \item The potential for bias in the triplet generation process, which may not fully capture all nuances of design similarity.
+\end{itemize}
+
+
+In conclusion, this work represents a significant step forward in automating the classification and retrieval of 3D CAD designs. By leveraging human expertise through targeted labeling and state-of-the-art deep learning techniques, we have created a robust similarity model that can greatly enhance the efficiency of design reuse and information retrieval in industrial settings. 
 
 %%% Local Variables: 
 %%% mode: latex

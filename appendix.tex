@@ -13,9 +13,7 @@ Then, we can find a second data point which distance to the anchor data point is
 
 The proposed triplet is the concatenation of these three data points. In the following, for simplicity, we will call these 3 data points respectively the anchor, the positive and the negative, even if the proposed negative can actually be the real positive (hard triplet).
 
-This selection process is shown in \autoref{fig:triplet_generation}. 
-
-\begin{figure}[]
+\begin{figure}[h]
     \centering
     \includegraphics[width=0.4\columnwidth]{images/triplet_generation.png}
     \caption{Triplet selection process. An "anchor" point is selected, and a "positive" point is found at a fixed target distance. A "negative" point is then found at a distance defined by the target distance plus a delta percentage. How far is the negative point matters a lot. If negative 1 is chosen, the triplet will likely be easy to label, but will not bring a lot of value to the model. If negative 2 is chosen, the triplet will likely be hard to label (and thus skipped), but will bring a lot of value to the model.}

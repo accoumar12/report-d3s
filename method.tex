@@ -15,6 +15,13 @@ There are actually two main use cases for the application: labeling triplets (\a
 
 \begin{itemize}
   \item \textbf{Labeling triplets:} Users are presented with a triplet of 3D designs, with the reference design (anchor) in the center. Their task is to swipe left or right to indicate whether the left or right design is more similar to the anchor design. A skip option is also available for ambiguous cases.
+
+\begin{figure}[]
+  \centering
+  \includegraphics[width=0.8\columnwidth]{images/tinder3d_labeling.png}
+  \caption{User interface for the labeling use case. Here, the design on the right is more similar to the anchor design in the center (curved edges).}
+  \label{fig:labeling_use_case}
+\end{figure}
   
   Users can also change to a canonical view of the designs to facilitate the comparison. This changes the perspective of a camera to a view aligned with the design's principal axes. This may or may not be useful depending on the design's geometry, as shown in \autoref{fig:default_vs_canonical}.
 
@@ -30,12 +37,6 @@ There are actually two main use cases for the application: labeling triplets (\a
   
 \end{itemize}
 
-\begin{figure}[]
-  \centering
-  \includegraphics[width=0.8\columnwidth]{images/tinder3d_labeling.png}
-  \caption{User interface for the labeling use case. Here, the design on the right is more similar to the anchor design in the center (curved edges).}
-  \label{fig:labeling_use_case}
-\end{figure}
 
 \begin{figure}[]
   \centering
@@ -79,7 +80,7 @@ Based on the definition of the loss, there are three categories of triplets:
   \item \textbf{Semi-hard triplets:} Triplets where the negative is not closer to the anchor than the positive, but which still have positive loss: $d(a, p) < d(a, n) < d(a, p) + margin$.
 \end{itemize}
 
-\begin{figure}[]
+\begin{figure}[h]
   \centering
   \includegraphics[width=0.5\columnwidth]{images/negative_types.png}
   \caption{The three types of negatives, given an anchor and a positive.}

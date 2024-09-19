@@ -3,20 +3,45 @@
 \markboth{Applications and perspectives}{Applications and perspectives}
 \label{chap:applications}
 %\minitoc
+\section{Applications}
 
-\begin{figure}[]
-    \centering
-    \includegraphics[width=0.7\columnwidth]{images/clusters_pca.png}
-    \caption{PCA clustering of spherified sample embeddings.}
-    \label{fig:pca_clusters}
-\end{figure}
+Immediate applications of the similarity model developed in this work include:
 
-\begin{figure}[]
-    \centering
-    \includegraphics[width=0.7\columnwidth]{images/clusters_tsne.png}
-    \caption{t-SNE clustering of spherified sample embeddings.}
-    \label{fig:tsne_clusters}
-\end{figure}
+\begin{enumerate}
+    \item \textbf{Automated Design Optimization}:
+    \begin{itemize}
+        \item Leveraging the similarity model to suggest design improvements based on high-performing similar designs.
+        \item Developing generative models that can propose new designs based on similarity-driven interpolation between existing successful designs.
+    \end{itemize}
+
+    \item \textbf{Integration with CAD Software}:
+    \begin{itemize}
+        \item Embedding the similarity model directly into CAD software for real-time suggestions during the design process.
+        \item Creating plugins that allow for similarity-based search and retrieval directly within popular CAD environments.
+        \item Embedding the model into D3S Costing Platform.
+    \end{itemize}
+\end{enumerate}
+
+\section{Future Perspectives}
+\label{sec:future-perspectives}
+
+The work presented here opens up several avenues for future research and development:
+
+\begin{enumerate}
+    \item \textbf{Multi-modal Similarity Models}: 
+    \begin{itemize}
+        \item Integrating geometric data with textual descriptions, functional specifications, or material properties to create more comprehensive similarity metrics.
+        \item Exploring the use of large language models to bridge the gap between natural language queries and geometric design features. \cite{liuOpenShapeScaling3D2023} uses CLIP to distill 2D and text representations knowledge to the 3D modality, but more recent papers like \cite{qiShapeLLMUniversal3D2024} use GPT 4 to chat with 3D models.
+    \end{itemize}
+
+
+    \item \textbf{Labeling tool for Active Learning}:
+    \begin{itemize}
+        \item Implementing active learning strategies to intelligently select new triplets for labeling, maximizing the information gain from human input.
+    \end{itemize}
+
+
+\end{enumerate}
 
 %%% Local Variables: 
 %%% mode: latex

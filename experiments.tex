@@ -15,7 +15,9 @@ For the transformer model, that take as input a point cloud, we convert the mesh
 
 Initially, the use of Principal Component Analysis (PCA) for training or inference, as done in \cite{popRotationInvariantGraph2023}, was considered but ultimately discarded. The idea of PCA is appealing because it allows working within a canonical reference frame. However, to ensure the model is as general as possible, data augmentation techniques were favored over PCA. One of the issues with PCA is demonstrated in \autoref{fig:pca_problem}. Additionally, we prefer to let the model architecture handle these aspects directly.
 
-\begin{figure}[]
+\clearpage
+
+\begin{figure}[h]
     \centering
     \includegraphics[width=\columnwidth]{images/pca_problem.png}
     \caption{Illustration of the issue using PCA as a preprocessing step. Both designs are tubular structures, shown in their default orientation and in the canonical reference frame. While the design on the left aligns its first principal axis with the tube's axis, the design on the right does not. This inconsistency can result in misalignment during training, particularly since the behavior varies depending on the specific design.}
@@ -36,7 +38,7 @@ Rotation invariance is a critical aspect of our model, as it allows the model to
 \end{itemize}
 
 Initially, data augmentation was performed offline. This means that for each triplet, each design was augmented by applying random rotations before the training process. We choose 10 rotations per design, as it yields the best results as shown in \autoref{fig:rotated_study}. Results are shown with our starting GNN EdgeConv model.
-\begin{figure}[]
+\begin{figure}[h]
     \begin{subfigure}[h]{0.5\linewidth}
         \includegraphics[width=\columnwidth]{images/mean_rotated_study.png}
         \caption{Mean distance to rotated distribution.}
@@ -53,7 +55,10 @@ Initially, data augmentation was performed offline. This means that for each tri
 \end{figure}
 
 We also experienced online data augmentation, where random rotations are applied on-the-fly during training. Indeed, there is no clear recipe for the best approach \cite{OfflineDataAugmentation} and we wanted to explore both options. The results of both approaches are compared in \autoref{fig:augmented_data_comparison}. The offline augmentation approach yielded better results.
-\begin{figure}[]
+
+\clearpage
+
+\begin{figure}[h]
     \begin{subfigure}[h]{0.5\linewidth}
         \includegraphics[width=\columnwidth]{images/mean_rotated_data_augmentation_type.png}
         \caption{Mean distance to rotated distribution.}
@@ -133,16 +138,15 @@ In order of their performance:
 Since we are working in an unsupervised setting, it is not possible to generate triplets on the fly, like is suggested in \cite{moindrotTripletLossOnline2018}. Also, triplets that are classified as easy triplets at a given epoch can't just be discarded from the training set, as they might become hard triplets at a later epoch.
 
 
+As shown in \autoref{fig:key_metrics_evolution_gnn}, the model quickly reaches a great accuracy on the test set. However, the original triplets order metrics starts decreasing after a few epochs, even if the loss continues to decrease. This shows the limitations of this architecture, as it is not able to further learn the correct order of the triplets. This tendency will be fixed by using a transformer-based model.
+
 \label{sec:graph-based-models}
-\begin{figure}[]
+\begin{figure}[h]
     \centering
     \includegraphics[width=0.5\columnwidth]{images/key_metrics_evolution_gnn.png}
     \caption{GNN model key metrics accuracies.}
     \label{fig:key_metrics_evolution_gnn}
 \end{figure}
-
-As shown in \autoref{fig:key_metrics_evolution_gnn}, the model quickly reaches a great accuracy on the test set. However, the original triplets order metrics starts decreasing after a few epochs, even if the loss continues to decrease. This shows the limitations of this architecture, as it is not able to further learn the correct order of the triplets. This tendency will be fixed by using a transformer-based model.
-
 
 \section{Transformer-based models}
 \label{sec:transformer-based-models}
@@ -154,19 +158,19 @@ As explained previously, several points made us pivot towards point cloud transf
     \item Easy switch from a mesh to a point cloud format.
 \end{itemize}
 
-The goal was to study the performance of a pre-trained encoding model our on data, as well as a fine-tuned model with our triplets. Several backbones were tested, such as ReCon++ \cite{qiShapeLLMUniversal3D2024} or PointTransformer \cite{zhaoPointTransformer2021}. The best results were obtained with the OpenShape model \cite{liuOpenShapeScaling3D2023}. Indeed, the pre-trained model already showed improved performance in comparison with our best GNN model, as it can be seen from the starting performance in \autoref{fig:key_metrics_evolution_openshape}. The fine-tuned model was able to reach even better results, as shown in \autoref{fig:key_metrics_evolution_openshape}.
+The goal was to study the performance of a pre-trained encoding model our on data, as well as a fine-tuned model with our triplets. Several backbones were tested, such as ReCon++ \cite{qiShapeLLMUniversal3D2024} or PointTransformer \cite{zhaoPointTransformer2021}. The best results were obtained with the OpenShape model \cite{liuOpenShapeScaling3D2023}, which architecture is derived from PointBERT \cite{yuPointBERTPretraining3D2022}. Indeed, the pre-trained model already showed improved performance in comparison with our best GNN model, as it can be seen from the starting performance in \autoref{fig:key_metrics_evolution_openshape}. The fine-tuned model was able to reach even better results, as shown in \autoref{fig:key_metrics_evolution_openshape}.
 
 We can clearly see the increasing metrics as the loss decreases, which was clearly not the case with the GNN model. The model is able to learn the correct order of the triplets, as shown by the original triplets order metrics. The rotation metrics are also improving, as shown in \autoref{fig:rotation_metrics_evolution_openshape}.
 This highlights the remarkable ability of transformers architectures to learn intricate patterns in the data, regardless of its nature.
 
-\begin{figure}[]
+\begin{figure}[h]
     \centering
     \includegraphics[width=0.5\columnwidth]{images/key_metrics_evolution_openshape.png}
     \caption{Fine-tuned model key metrics accuracies.}
     \label{fig:key_metrics_evolution_openshape}
 \end{figure}
 
-\begin{figure}[]
+\begin{figure}[h]
     \begin{subfigure}[h]{0.5\linewidth}
         \includegraphics[width=\columnwidth]{images/rotation_metrics_evolution_openshape.png}
         \caption{Distances to rotated designs accuracies.}
@@ -180,7 +184,26 @@ This highlights the remarkable ability of transformers architectures to learn in
     \label{fig:rotation_metrics_evolution_openshape}
 \end{figure}
 
+\section{Visualizations}
+
 As a final benchmark, we compared in the interface the nearest neighbors of a design given by the transformer pre-trained model and by the fine-tuned model. Even if fine-tuned model is better in terms of metrics, the qualitative results are not always better. This shows the limitations of the metrics and the importance of the interface to validate the final model's performance, especially in our unsupervised setting.
+
+It's also interesting to visualize the embeddings in a 3D space. These show the model's ability to cluster similar designs together, even without explicit labels for the designs. 
+The model is truly able to learn the underlying geometric features of the designs, as shown in \autoref{fig:pca_clusters} and \autoref{fig:tsne_clusters}.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\columnwidth]{images/clusters_tsne.png}
+    \caption{t-SNE clustering of spherified sample embeddings.}
+    \label{fig:tsne_clusters}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\columnwidth]{images/clusters_pca.png}
+    \caption{PCA clustering of spherified sample embeddings.}
+    \label{fig:pca_clusters}
+\end{figure}
+
 %%% Local Variables: 
 %%% mode: latex
 %%% TeX-master: "isae-report-template"
